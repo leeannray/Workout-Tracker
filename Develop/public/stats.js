@@ -220,4 +220,4 @@ function workoutNames(data) {
   });
   
   return workouts;
-}
+};
