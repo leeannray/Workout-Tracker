@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
 
 
 app.get("/", (req, res) => {
-  return res.sendFile(path.join(__dirname, "public/index.html"));
+  return res.sendFile(path.join(__dirname, "./index.html"));
 });
 
 app.get("/stats", (req, res) => {
@@ -91,9 +91,6 @@ app.put("/api/workouts/:id", async function (req, res) {
   }
 });
 
-/*==============================================================
-    Server Start
-================================================================*/
 
 app.listen(PORT, () => {
   console.log(`App running at http://localhost:${PORT}`);
